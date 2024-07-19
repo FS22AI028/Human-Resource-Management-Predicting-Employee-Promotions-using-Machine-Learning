@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Predict</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background: url('https://t4.ftcdn.net/jpg/02/62/17/49/240_F_262174953_wob2JN075TWTPTQbHNFr8AAJNM8K3Zgp.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            height: 100vh; /* Ensure full screen height background */
+           
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        form {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Lighter overlay for form */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label, select, input {
+            margin: 10px;
+            font-size: 1.2em;
+            color: white; /* Text color for form elements */
+        }
+        select, input[type="number"] {
+            background-color: #444;
+            border: 1px solid #666;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        select:focus, input[type="number"]:focus {
+            border-color: #888;
+            outline: none;
+        }
+        button {
+            margin: 10px;
+        }
+        a {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">HR Management System</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container animate__animated animate__fadeIn">
+        <h1>Prediction Page</h1>
+        <form method="post" action="/result" class="animate__animated animate__zoomIn">
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="Sales">Sales</option>
+                <option value="Technical">Technical</option>
+                <option value="Support">Support</option>
+            </select><br>
+            <label for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+            </select><br>
+            <label for="no_of_trainings">No of Trainings:</label>
+            <input type="number" id="no_of_trainings" name="no_of_trainings" required><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+            <label for="previous_year_rating">Previous Year Rating:</label>
+            <input type="number" step="0.1" id="previous_year_rating" name="previous_year_rating" required><br>
+            <label for="length_of_service">Length of Service:</label>
+            <input type="number" id="length_of_service" name="length_of_service" required><br>
+            <label for="KPIs_met_above_80">KPIs met >80% (0/1):</label>
+            <select id="KPIs_met_above_80" name="KPIs_met_above_80" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select><br>
+            <label for="awards_won">Awards Won (0/1):</label>
+            <select id="awards_won" name="awards_won" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select><br>
+            <label for="avg_training_score">Avg Training Score:</label>
+            <input type="number" id="avg_training_score" name="avg_training_score" required><br>
+            <button type="submit" class="btn btn-success">Predict</button>
+        </form>
+        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/about" class="btn btn-secondary">About</a>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background: url('https://t4.ftcdn.net/jpg/07/08/88/19/240_F_708881972_su6lvRUMB7YHnrf1ZZ5jsJM8CHPIqNCk.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            height: 100vh; /* Ensure full screen height background */
+            overflow: hidden; /* Prevent scroll bars due to fixed background */
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Lighter overlay for better readability */
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            right: 10%; /* Adjust right positioning */
+            transform: translate(0, -50%);
+            width: 80%;
+            max-width: 600px; /* Adjust max-width as needed */
+            text-align: left; /* Align text to the left */
+        }
+        h1 {
+            font-size: 3em;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">HR Management System</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/predict">Predict</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="overlay animate__animated animate__fadeIn">
+        <h1>Welcome to HR Management System</h1>
+        <p>Predict employee promotions with machine learning</p>
+        <a href="/predict" class="btn btn-success">Predict</a>
+        <a href="/about" class="btn btn-primary">About</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HR Management System - by Atharva Metkar. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
